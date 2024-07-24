@@ -23,3 +23,5 @@ for t in range(T):
         print(f'#{t+1} {year}/{month}/{day}')
     else:
         print(f'#{t+1} -1')
+
+    
