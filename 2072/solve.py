@@ -11,3 +11,4 @@ for t in range(T):
         if num % 2 == 1:
             sum_odd = sum_odd + num
     print(f'#{t+1} {sum_odd}')
+
