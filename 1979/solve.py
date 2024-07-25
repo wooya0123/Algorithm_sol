@@ -3,13 +3,14 @@ sys.stdin = open('input.txt')
 
 T = int(input())    # 테스트 케이스 갯수
 
-def words_repetition(lst, K):    # 테스트 케이스의 1개 열에 1이 K개 연속으로 나오는지 확인하는 함수            
-    cnt = 0
-    sc = 0
+# 테스트 케이스의 1개 열에 1이 K개 연속으로 나오는지 확인하는 함수
     # 리스트 요소가 1이면 cnt를 1 증가
     # cnt가 K와 같다면(= 빈 공간이 단어 길이 만큼 있다) sc를 1 증가
     # cnt가 K보다 크다면(= 빈 공간이 단어 길이보다 많다) sc를 1 감소, cnt를 0으로
     # 리스트 요소가 1이 아니면 cnt는 0
+def words_repetition(lst, K):                
+    cnt = 0
+    sc = 0
     
     for i in range(len(lst)):   
         if lst[i] == 1:
@@ -38,12 +39,7 @@ for tc in range(1, T+1):
 
         sc = words_repetition(row, K)      # K개의 빈 공간이 연속으로 있다면
         success_case = success_case + sc        # 성공 케이스 숫자 + 1
-    for line in zip(*lst_group):                # N개의 열을 담은 리스트를 행으로 변환
+    for line in zip(*lst_group):                # 열별로 담은 리스트를 행으로 변환
         sc = words_repetition(line, K)       # K개의 빈 공간이 연속으로 있다면
         success_case = success_case + sc        # 성공 케이스 숫자 + 1
     print(f'#{tc} {success_case}')
-
-'''
-가로에서 먼저 3개 짜리 공간 확인
-zip 함수로 세로로 묶은 후 3개짜리 공간 확인
-'''
