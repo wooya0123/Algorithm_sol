@@ -3,12 +3,11 @@ sys.stdin = open('input.txt')
 
 T = int(input())
 
-'''
-2로 나누고 나머지가 0이면 카운트 +1, N을 2로 나눈 몫을 N에 할당,
-나머지가 0이 아니면 break 
+# 2로 나누고 나머지가 0이면 카운트 +1, N을 2로 나눈 몫을 N에 할당,
+# 나머지가 0이 아니면 break 
+# 과정 반복
 
-과정 반복
-'''
+
 for tc in range(1, T+1):
     N = int(input())
     # 2로 나눌 경우
