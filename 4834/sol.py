@@ -26,3 +26,5 @@ for tc in range(1, T+1):
                 max_key = keys[j]
     print(f'#{tc} {max_key} {max_value}')
 
+    
+
