@@ -18,11 +18,12 @@ for tc in range(1, T+1):
     values = num.values()
 
     max_value = int(max(values))
+    max_key = 0
     
     for key in keys:
         if num[key] == max_value:
-            max_key = key
-            break
+            if max_key < key:
+                max_key = key
     print(f'#{tc} {max_key} {max_value}')
 
 
