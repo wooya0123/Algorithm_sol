@@ -58,3 +58,5 @@ for tc in range(1, T+1):
             elif board[i][j] == 2:
                 w_cnt += 1
     print(f'#{tc} {b_cnt} {w_cnt}')
+
+    
