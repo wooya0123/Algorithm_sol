@@ -47,3 +47,5 @@ for _ in range(1, 11):
             max_cnt = cnt
             X = y
     print(max_cnt, X)
+
+    

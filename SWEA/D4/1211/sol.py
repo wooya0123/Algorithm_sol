@@ -36,3 +36,5 @@ for _ in range(1, 11):
                     visited[nx][ny] = visited[x][y] + 1
 
     print(result)
+
+    
