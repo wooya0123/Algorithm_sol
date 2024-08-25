@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('sample_input (5).txt')
+sys.stdin = open('sample_input.txt')
 
 T = int(input())
 
@@ -7,38 +7,82 @@ for tc in range(1, T+1):
     N, M = list(map(int, input().split()))
     arr = [list(input()) for _ in range(N)]
 
-    # 가로 조사
+    result = []
+
     for i in range(N):
-        row_text = arr[i]
-        row_length = len(row_text)
-        if row_length % 2 == 0:
-            row_rep = int(row_length // 2)
-        else:
-            row_rep = int((row_length - 1) // 2)
+        if N > M:
+            for j in range(0, N-M):
+                for k in range(M//2):
+                    # 가로 탐색
+                    if arr[i][j+k] != arr[i][j+M-1-k]:
+                        result = []
+                        break
+                    else:
+                        result += [[i, j]]
 
-
-        for k in range(row_rep):
-            if row_text[k] != row_text[N-1-k]:
+                    # 세로 탐색
+                    if arr[j+k][i] != arr[j+M-1-k][i]:
+                        result = []
+                        break
+                    else:
+                        result += [[i, j]]
+                if result:
+                    break
+            if result:
                 break
-            print(''.join(row_text))
-            break
-
-    # 세로 조사
-    for i in range(N):
-        col_text = []
-        for j in range(M):
-            col_text += arr[j][i]
-        col_length = len(col_text)
-        if col_length % 2 == 0:
-            col_rep = int(col_length // 2)
         else:
-            col_rep = int((col_length - 1) // 2)
+            for k in range(M // 2):
+                # 가로 탐색
+                if arr[i][k] != arr[i][N-1-k]:
+                    result = []
+                    break
+                else:
+                    result += [[i, k]]
 
-        for m in range(col_rep // 2):
-            if col_text[m] != col_text[N-1-m]:
+                # 세로 탐색
+                if arr[k][i] != arr[N-1-k][i]:
+                    result = []
+                    break
+                else:
+                    result += [[i, k]]
+            if result:
                 break
-            print(''.join(col_text))
-            break
+    print(result)
+
+
+
+    # # 가로 조사
+    # for i in range(N):
+    #     row_text = arr[i]
+    #     row_length = len(row_text)
+    #     if row_length % 2 == 0:
+    #         row_rep = int(row_length // 2)
+    #     else:
+    #         row_rep = int((row_length - 1) // 2)
+    #
+    #
+    #     for k in range(row_rep):
+    #         if row_text[k] != row_text[N-1-k]:
+    #             break
+    #         print(''.join(row_text))
+    #         break
+    #
+    # # 세로 조사
+    # for i in range(N):
+    #     col_text = []
+    #     for j in range(M):
+    #         col_text += arr[j][i]
+    #     col_length = len(col_text)
+    #     if col_length % 2 == 0:
+    #         col_rep = int(col_length // 2)
+    #     else:
+    #         col_rep = int((col_length - 1) // 2)
+    #
+    #     for m in range(col_rep // 2):
+    #         if col_text[m] != col_text[N-1-m]:
+    #             break
+    #         print(''.join(col_text))
+    #         break
 
 
 
