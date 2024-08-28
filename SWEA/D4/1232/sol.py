@@ -2,25 +2,25 @@ import sys
 sys.stdin = open('input.txt')
 
 def in_order(T):
-    exp = []
+    exp = []                                # 연산할 것들을 담아둠
     if T:
-        exp += in_order(left[T])
+        exp += in_order(left[T])            # 반환된 exp를 리스트에 저장
         exp += [node[T]]
         exp += in_order((right[T]))
 
         if len(exp) == 3:                   # 리스트에 숫자-연산자-숫자가 됐을 때 연산하고 반환
             if exp[1] == '+':
-                exp = [exp[0] + exp[2]]
+                exp = exp[0] + exp[2]
 
             elif exp[1] == '-':
-                exp = [exp[0] - exp[2]]
+                exp = exp[0] - exp[2]
 
             elif exp[1] == '*':
-                exp = [exp[0] * exp[2]]
+                exp = exp[0] * exp[2]
 
             else:
-                exp = [exp[0] / exp[2]]
-    return exp
+                exp = exp[0] / exp[2]
+    return [exp]                            # 리스트에 담아둘 것이므로 리스트 형태로 반환
 
 T = 10
 
