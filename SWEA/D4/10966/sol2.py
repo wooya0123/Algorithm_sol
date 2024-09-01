@@ -17,7 +17,7 @@ for tc in range(1, T + 1):
         for j in range(M):
             if map_list[j] == 'W':  # W에서 L로 이동하는 최단거리를 기록하는데 visited에 자기보다 큰 값이 있으면 작은 걸로 갱신
                 queue.append((i, j))
-                visited[i][j] = 0  # W에는 1 기록
+                visited[i][j] = 0  # W에는 0 기록
 
     while queue:
         ci, cj = queue.popleft()
