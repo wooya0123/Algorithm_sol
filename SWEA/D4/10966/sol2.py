@@ -15,7 +15,7 @@ for tc in range(1, T + 1):
     for i in range(N):
         map_list = input()
         for j in range(M):
-            if map_list[j] == 'W':  # W에서 L로 이동하는 최단거리를 기록하는데 visited에 자기보다 큰 값이 있으면 작은 걸로 갱신
+            if map_list[j] == 'W':  # BFS로 탐색하여 각 W에서 1칸씩 이동하여 기록
                 queue.append((i, j))
                 visited[i][j] = 0  # W에는 0 기록
 
