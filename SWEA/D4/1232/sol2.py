@@ -2,7 +2,7 @@ import sys
 sys.stdin = open('input.txt')
 
 def in_order(T):
-    ex = node[T][0]                     # 숫자 혹은 연산자
+    ex = node[T][0]          # 숫자 혹은 연산자
     left = node[T][1]
     right = node[T][2]
     exp = []
