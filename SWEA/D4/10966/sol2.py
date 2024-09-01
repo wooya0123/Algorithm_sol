@@ -2,6 +2,7 @@ import sys
 sys.stdin = open('sample_input.txt')
 
 from collections import deque
+
 T = int(input())
 
 for tc in range(1, T + 1):
@@ -10,7 +11,7 @@ for tc in range(1, T + 1):
     visited = [[-1] * M for _ in range(N)]
     res = 0
 
-    queue = []
+    queue = deque()
     for i in range(N):
         map_list = input()
         for j in range(M):
@@ -19,14 +20,14 @@ for tc in range(1, T + 1):
                 visited[i][j] = 0  # W에는 1 기록
 
     while queue:
-        ci, cj = queue.pop(0)
+        ci, cj = queue.popleft()
 
         for di, dj in [-1, 0], [1, 0], [0, -1], [0, 1]:  # 상하좌우
             ni = ci + di
             nj = cj + dj
             if 0 <= ni < N and 0 <= nj < M and visited[ni][nj] == -1:
-                    queue.append((ni, nj))
-                    visited[ni][nj] = visited[ci][cj] + 1
+                queue.append((ni, nj))
+                visited[ni][nj] = visited[ci][cj] + 1
 
     for x in visited:
         res += sum(x)
