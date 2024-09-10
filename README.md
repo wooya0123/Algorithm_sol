@@ -14,5 +14,7 @@
 
 [D4](SWEA/D4)
 
+[A형 기출](SWEA/SW_test_problem)
+
 ## Programmers
 [Lv1](Programmers/LV1)
