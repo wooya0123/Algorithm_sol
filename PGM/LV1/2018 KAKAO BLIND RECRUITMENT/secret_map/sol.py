@@ -42,3 +42,4 @@ arr2 = [30, 1, 21, 17, 28]
 
 ans = solution(n, arr1, arr2)
 print(ans)
+
