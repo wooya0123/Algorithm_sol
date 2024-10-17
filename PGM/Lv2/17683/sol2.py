@@ -24,12 +24,11 @@ def solution(m, musicinfos):
         play_melody = (melody * (play_time // len(melody) + 1))[:play_time]
 
         # 재생되는 멜로디 안에 기억한 멜로디가 있는지 확인
-       for j in range(len(play_melody)):
+        for j in range(len(play_melody)):
             if play_melody[j] == m[0]:
                 if play_melody[j:j + len(m)] == m:
                     res.append((title, play_time))
                     break
-
     if not res:
         return '(None)'
     else:
