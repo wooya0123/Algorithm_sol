@@ -39,7 +39,7 @@ def solution(fees, records):
 
     # 차 번호 기준으로 오름차순 정렬
     parking_records.sort(key=lambda x: x[0])
-    
+
     # 주차한 차 요금 계산해서 res 리스트에 추가
     res = []
     basic_time = fees[0]
@@ -57,10 +57,7 @@ def solution(fees, records):
                 cost += unit_fee
         res.append(cost)
 
-
     return res
-
-
 
 
 fees = [180, 5000, 10, 600]
