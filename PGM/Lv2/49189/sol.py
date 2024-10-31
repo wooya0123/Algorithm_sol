@@ -1,3 +1,5 @@
+# 실패한 풀이 - DFS로 접근하려 했음
+
 def solution(n, edge):
     nodes = [[] for _ in range(n+1)]
     for v in edge:
