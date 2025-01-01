@@ -52,6 +52,7 @@ for i in range(M):
             word = back.popleft()
             front.append(word)
 
+# 리스트를 문자열로
 res1 = ''.join(front)
 res2 = ''.join(back)
 res = res1 + res2
