@@ -6,14 +6,14 @@
 4. 다시 볼 필요가 있거나 꼭 기억해야할 점이 있다면 README 파일에 작성해놓기
 
 ## Commit 규칙
-commit 메세지 양식 : "[플랫폼] 문제번호 문제명 / 난이도 / 문제 걸린시간"
-ex. [SEA] 1207 / d2 / 2H / 홍길동
+commit 메세지 양식 : "[플랫폼] 문제번호 문제명 / 난이도 / 문제 걸린시간" <br>
+ex. [SEA] 1207 문자열 만들기 / d2 / 2H
 
 플랫폼 작성법 통일
-[BOJ] - 백준
-[PGM] - 프로그래머스
-[SEA] - 삼성 SW Expert Academy
-[ETC] - 그 외 플랫폼
+[BOJ] - 백준 <br>
+[PGM] - 프로그래머스 <br>
+[SEA] - 삼성 SW Expert Academy <br>
+[ETC] - 그 외 플랫폼 <br>
 
 ## SWEA
 [D1](SWEA/D1)
