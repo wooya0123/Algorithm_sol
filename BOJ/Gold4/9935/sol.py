@@ -19,8 +19,6 @@ for word in words:
 res = ''.join(stack)
 print(res if res else 'FRULA')
 
-
-# 문자열로 풀이하면 시간초과 발생
 # while True:
 #     idx = words.find(bombs)
 #     if idx == -1:
