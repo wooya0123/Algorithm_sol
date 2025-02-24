@@ -14,7 +14,7 @@ for j in ans:
     print(j, end=" ")
 
 
-
+# 시간복잡도 O(n^2)인 코드
 # for i in range(len(arr)):
 #     a = arr[i]
 #     for j in range(i+1, len(arr)):
