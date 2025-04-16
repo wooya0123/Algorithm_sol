@@ -22,13 +22,13 @@ while True:
 
     # 가로 세로
     for i in range(3):
-        if len(set(row_board[i])) == 1:
+        if row_board[i][0] == row_board[i][1] == row_board[i][2]:
             if row_board[i][0] == 'O':
                 res['O'] += 1
             elif row_board[i][0] == 'X':
                 res['X'] += 1
 
-        if len(set(col_board[i])) == 1:
+        if col_board[i][0] == col_board[i][1] == col_board[i][2]:
             if col_board[i][0] == 'O':
                 res['O'] += 1
             elif col_board[i][0] == 'X':
@@ -40,10 +40,10 @@ while True:
             res['X'] += 1
         elif row_board[0][0] == 'O':
             res['O'] += 1
-    elif row_board[0][2] == row_board[1][1] == row_board[2][0] and row_board[0][0] != '.':
+    elif row_board[0][2] == row_board[1][1] == row_board[2][0] and row_board[0][2] != '.':
         if row_board[0][2] == 'X':
             res['X'] += 1
-        elif row_board[0][0] == 'O':
+        elif row_board[0][2] == 'O':
             res['O'] += 1
 
     if res['X'] > 0 and res['O'] == 0 and X_cnt == O_cnt + 1:
